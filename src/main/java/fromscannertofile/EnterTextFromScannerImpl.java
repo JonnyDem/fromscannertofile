@@ -8,14 +8,10 @@ import java.util.Scanner;
 /**
  * Created by Ваня on 06.09.2017.
  */
-public class EnterFromScanner {
+public class EnterTextFromScannerImpl implements EnterTextFromScanner {
 
-    public static void main(String[] args) {
-
-        writeTextFromScannerToFile();
-    }
-    
-    private static void writeTextFromScannerToFile()  {
+    @Override
+    public void writeTextFromScannerToFile() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter path where you want to create new or use existing file (example: C:\\Users\\IdeaProjects\\fromscannertofile\\src\\main\\resources\\Scanner.txt)");
         String path = scan.nextLine();
